@@ -95,7 +95,7 @@ You can now make changes, set breakpoints, etc.
 
 The [tasks.json](examples/vscode/tasks.json) defines the following tasks that you may use withing VSCode (`CTRL-SHIFT-P > Tasks: Run Task`):
 
-1. **Start openHAB (Debug)** - this task will start a new instance of openHAB in debug mode (allowing VSCode to connect to it).  Please shut down any other instances of openHAB prior to running this (see next task).  This will open a **new** terminal for openHAB to run in.  Formally, this will call `start.bat debug` (or `start.sh debug` on osx/linux) in the `openhab_home` directory.
+1. **Start openHAB (Debug)** - this task will start a new instance of openHAB in debug mode (allowing VSCode to connect to it).  Please shut down any other instances of openHAB prior to running this (see next task).  This will open a **new** terminal for openHAB to run in.  Formally, this will call `start.bat debug` (or `start.sh debug` on osx/linux) in the `openhab_home` directory. {On my Windows installation there was no start.bat. Which commands should be included if I want to start openhab on my raspi? }
 1. **Stop openHAB** - this task will stop any running instance.  Please note this will stop an instance started outside of VSCode as well on the same machine.  Formally, this will call `stop.bat` (or `stop.sh` on osx/linux) in the `openhab_runtime/bin` directory.
 1. **mvn Compile (Online)** - this task will run a online maven compile skipping code checks.  Formally, will run `mvn clean install -DskipChecks`
 1. **mvn Compile (Offline)** - this task will run a offline maven compile skipping code checks (assumes you have run a online compile atleast once).  Formally, will run `mvn -o clean install -DskipChecks`
